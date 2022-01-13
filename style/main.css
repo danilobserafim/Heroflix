@@ -1,0 +1,189 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: var(--preto);
+    color: white;
+}
+/* barra superior */
+header.container{
+    width: 100%;
+    position: fixed;
+    padding: 16px 64px;
+    background: linear-gradient(to right, #101010 40%, rgba(0, 0, 0, 0.096) 60%);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 32px;
+    flex-wrap: wrap;
+    z-index: 100;
+
+}
+header.container #logo{
+    max-width: 130px;
+}
+
+header.container nav a{
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #AAA;
+}
+header.container nav a#active{
+    color: white;
+}
+header.container nav a:hover{
+    color: white;
+}
+
+
+/* Banner do filme em destaque */
+#banner.filme{
+    background: linear-gradient(to right, transparent, #14141470 ), url('../assets/bannerFilmes.jpg');
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#banner.series{
+    background: linear-gradient(to right, transparent, #14141470 ), url('../assets/bannerSeries.jpg');
+    background-position: top right;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#banner.documentarios{
+    background: linear-gradient(to right, transparent, #14141470 ), url('../assets/bannerDocumentarios.jpg');
+    background-position: top left;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+#banner.documentarios article{
+    background: transparent;
+}
+#banner{
+    padding: 120px 32px;
+    font-size: 120%;
+    margin-bottom: 32px;
+}
+
+#banner img{
+    display: none;
+}
+
+#artigo-banner{
+    padding: 32px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0));
+    text-shadow: 1px 1px 2px black;
+    
+}
+
+
+#banner button{
+    font-weight: 700;
+    transition: 0.3s ease all;
+    padding:12px 8px;
+    background: rgba(22, 22, 22, 0.7);
+    color: rgb(245, 245, 245);
+    border-radius: 10px;
+    border: 1px solid rgba(138, 138, 138, 0.5);
+    cursor: pointer;
+    width: 200px;
+    margin:80px 16px 0 0;
+}
+#banner button span{
+    margin-left: 8px;
+}
+
+#banner button:hover{
+    color: white;
+    background: rgb(0, 0, 0);
+
+}
+#banner #destaque{
+    background: var(--vermelho);
+}
+#banner #destaque:hover{
+    background-color: #bd0009;
+}
+
+.item{
+    padding: 4px;
+}
+.item img{
+    width: 35px;
+}
+.cards{
+    margin: 32px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.cards h4{
+    font-size: 0.8rem;
+    margin-top: 16px;
+}
+@media (max-width:800px) {
+    header.container{
+        background: var(--preto);
+        gap: 8px;
+        padding: 16px;
+        font-size: 0.9rem;
+    }
+    
+    #banner{
+        font-size: 100%;
+        padding: 16px;
+        background: none;
+        width: 100%;
+        height: max-content;
+    }
+    #banner h3{
+        margin-top: 64px;
+    }
+    #banner img{
+        margin-top: 15vh;
+        width: 100%;
+        display: block;
+    }
+    #banner p{
+        font-size: 110%;
+    }
+    #banner button{
+        background-color: rgb(70, 70, 70);
+        margin-top: 0;
+        width: 100%;
+    }
+    #banner article{
+        background: transparent;
+        padding: 32px 0;
+    }
+    #banner iframe{
+        top: 50px;
+        width: 100%;
+        height: 60vw;
+    }
+    #banner.documentarios{
+        background: transparent;
+    }
+    .cards h3{
+       
+        font-size: 90%;
+        font-weight: 500;
+    }
+    #groupButtons{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
