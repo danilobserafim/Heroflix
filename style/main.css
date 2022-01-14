@@ -15,8 +15,7 @@ body{
 }
 /* barra superior */
 header.container{
-    width: 100%;
-    position: fixed;
+    
     padding: 16px 64px;
     background: linear-gradient(to right, #101010 40%, rgba(0, 0, 0, 0.096) 60%);
     display: flex;
@@ -58,9 +57,9 @@ header.container nav a:hover{
     background-repeat: no-repeat;
 }
 #banner.documentarios{
-    background: linear-gradient(to right, transparent, #14141470 ), url('../assets/bannerDocumentarios.jpg');
+    background: linear-gradient(to top, transparent, #14141470 ), url('../assets/bannerDocumentarios.jpg');
     background-position: top left;
-    background-size: 110%;
+    background-size: 150%;
     background-repeat: no-repeat;
 }
 #banner.documentarios article{
@@ -141,20 +140,18 @@ header.container nav a:hover{
     
     #banner{
         font-size: 100%;
-        padding: 16px;
-        background: none;
+        padding: 0;
+        background: transparent;
         width: 100%;
-        height: max-content;
     }
-    #banner h3{
-        margin-top: 64px;
-    }
+    
     #banner img{
-        margin-top: 15vh;
+        padding: 0;margin: 0;
         width: 100%;
         display: block;
     }
     #banner p{
+
         font-size: 110%;
     }
     #banner button{
@@ -164,16 +161,13 @@ header.container nav a:hover{
     }
     #banner article{
         background: transparent;
-        padding: 32px 0;
+        padding: 32px ;
     }
     #banner iframe{
-        top: 50px;
         width: 100%;
         height: 60vw;
     }
-    #banner.documentarios{
-        background: transparent;
-    }
+    
     .cards h3{
        
         font-size: 90%;
